@@ -1,256 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raíces Nómadas – Un hostal con alma en Costa Rica</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Define color variables for easier management */
-        :root {
-            --dark-green: #14532d; /* Example: green-900 */
-            --light-brown: #fef3c7; /* Example: amber-100 */
-            --text-brown: #78350f;  /* Example: amber-800 */
-            --accent-green: #10b981; /* Example: emerald-500 */
-        }
-        .bg-dark-green { background-color: var(--dark-green); }
-        .text-dark-green { color: var(--dark-green); }
-        .border-dark-green { border-color: var(--dark-green); }
-        .bg-light-brown { background-color: var(--light-brown); }
-        .text-light-brown { color: var(--light-brown); }
-        .text-brown { color: var(--text-brown); }
-        .bg-accent-green { background-color: var(--accent-green); }
-        .hover\:bg-accent-green-dark:hover { background-color: #059669; } /* Darker emerald for hover */
-        .hover\:bg-dark-green-light:hover { background-color: #15803d; } /* Lighter green for hover */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces Nómadas – Un hostal con alma en Costa Rica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Define color variables for easier management */
+        :root {
+            --dark-green: #14532d; /* Example: green-900 */
+            --light-brown: #fef3c7; /* Example: amber-100 */
+            --text-brown: #78350f;  /* Example: amber-800 */
+            --accent-green: #10b981; /* Example: emerald-500 */
+        }
+        .bg-dark-green { background-color: var(--dark-green); }
+        .text-dark-green { color: var(--dark-green); }
+        .border-dark-green { border-color: var(--dark-green); }
+        .bg-light-brown { background-color: var(--light-brown); }
+        .text-light-brown { color: var(--light-brown); }
+        .text-brown { color: var(--text-brown); }
+        .bg-accent-green { background-color: var(--accent-green); }
+        .hover\:bg-accent-green-dark:hover { background-color: #059669; } /* Darker emerald for hover */
+        .hover\:bg-dark-green-light:hover { background-color: #15803d; } /* Lighter green for hover */
 
-        /* Style for the hero image section */
-        .hero-image-container {
-            height: 60vh; /* Adjust height as needed */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        /* Ensure buttons have good contrast and padding */
-        .btn {
-            @apply inline-block px-6 py-3 rounded-lg text-center font-semibold transition duration-300 ease-in-out shadow-md;
-        }
-        .btn-primary {
-            @apply bg-accent-green text-white hover:bg-accent-green-dark;
-        }
-        .btn-secondary {
-            @apply bg-white text-dark-green border border-dark-green hover:bg-gray-100;
-        }
-        .btn-cta {
-             @apply bg-dark-green text-white hover:bg-dark-green-light;
-        }
+        /* Style for the hero image section */
+        .hero-image-container {
+            height: 60vh; /* Adjust height as needed */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Ensure buttons have good contrast and padding */
+        .btn {
+            @apply inline-block px-6 py-3 rounded-lg text-center font-semibold transition duration-300 ease-in-out shadow-md;
+        }
+        .btn-primary {
+            @apply bg-accent-green text-white hover:bg-accent-green-dark;
+        }
+        .btn-secondary {
+            @apply bg-white text-dark-green border border-dark-green hover:bg-gray-100;
+        }
+        .btn-cta {
+             @apply bg-dark-green text-white hover:bg-dark-green-light;
+        }
 
-        /* Section padding */
-        section {
-            @apply py-16 px-4 sm:px-8 lg:px-16;
-        }
+        /* Section padding */
+        section {
+            @apply py-16 px-4 sm:px-8 lg:px-16;
+        }
 
-        /* Icon styling */
-        .feature-icon {
-            @apply text-dark-green text-3xl mb-3; /* Or use accent color */
-        }
-    </style>
+        /* Icon styling */
+        .feature-icon {
+            @apply text-dark-green text-3xl mb-3; /* Or use accent color */
+        }
+    </style>
 </head>
 <body class="bg-white text-gray-800">
 
-    <header>
-        <div class="hero-image-container" style="background-image: url('Foto landing Hostal raices.jpg');">
-            <img src="Foto landing Hostal raices.jpg" alt="Vista del hostal Raíces Nómadas o paisaje de Costa Rica" style="display: none;" onerror="this.parentElement.style.backgroundImage='url(https://placehold.co/1200x600/14532d/fef3c7?text=Ra%C3%ADces+N%C3%B3madas)'; this.onerror=null;">
-        </div>
-        <div class="bg-light-brown text-center py-12 px-4">
-            <h1 class="text-4xl md:text-5xl font-bold text-dark-green mb-4">
-                Raíces Nómadas – Un hostal con alma en Costa Rica
-            </h1>
-            <p class="text-xl text-brown mb-8">
-                Más que una cama: un espacio para descansar, reconectar y crecer.
-            </p>
-            <div class="space-x-4">
-                <a href="#crowdfunding" class="btn btn-primary">Apoya el proyecto</a>
-                <a href="#video" class="btn btn-secondary">Ver video</a>
-            </div>
-        </div>
-    </header>
+    <header>
+        <div class="hero-image-container" style="background-image: url('Foto landing Hostal raices.jpg');">
+            <img src="Foto landing Hostal raices.jpg" alt="Vista del hostal Raíces Nómadas o paisaje de Costa Rica" style="display: none;" onerror="this.parentElement.style.backgroundImage='url(https://placehold.co/1200x600/14532d/fef3c7?text=Ra%C3%ADces+N%C3%B3madas)'; this.onerror=null;">
+        </div>
+        <div class="bg-light-brown text-center py-12 px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark-green mb-4">
+                Raíces Nómadas – Un hostal con alma en Costa Rica
+            </h1>
+            <p class="text-xl text-brown mb-8">
+                Más que una cama: un espacio para descansar, reconectar y crecer.
+            </p>
+            <div class="space-x-4">
+                <a href="#crowdfunding" class="btn btn-primary">Apoya el proyecto</a>
+                <a href="#video" class="btn btn-secondary">Ver video</a>
+            </div>
+        </div>
+    </header>
 
-    <main>
-        <section class="bg-white">
-            <div class="container mx-auto text-center max-w-4xl">
-                <h2 class="text-3xl font-bold text-dark-green mb-6">¿Por qué este hostal es diferente?</h2>
-                <p class="text-lg text-gray-700 mb-10">
-                    Raíces Nómadas nace del deseo de ofrecer más que alojamiento:
-                    Un refugio para mochileros, nómadas y viajeros conscientes.
-                    Por solo 10€ por noche, podrán dormir, compartir y vivir experiencias que los hagan crecer.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="flex flex-col items-center p-4">
-                        <i class="fas fa-chalkboard-teacher feature-icon"></i>
-                        <h3 class="font-semibold text-lg text-dark-green mt-2">Talleres gratuitos</h3>
-                    </div>
-                    <div class="flex flex-col items-center p-4">
-                         <i class="fas fa-leaf feature-icon"></i>
-                        <h3 class="font-semibold text-lg text-dark-green mt-2">Turismo consciente</h3>
-                    </div>
-                    <div class="flex flex-col items-center p-4">
-                         <i class="fas fa-om feature-icon"></i>
-                        <h3 class="font-semibold text-lg text-dark-green mt-2">Espacios de meditación y arte</h3>
-                    </div>
-                    <div class="flex flex-col items-center p-4">
-                         <i class="fas fa-users feature-icon"></i>
-                        <h3 class="font-semibold text-lg text-dark-green mt-2">Conexión real entre viajeros</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main>
+        <section class="bg-white">
+            <div class="container mx-auto text-center max-w-4xl">
+                <h2 class="text-3xl font-bold text-dark-green mb-6">¿Por qué este hostal es diferente?</h2>
+                <p class="text-lg text-gray-700 mb-10">
+                    Raíces Nómadas nace del deseo de ofrecer más que alojamiento:
+                    Un refugio para mochileros, nómadas y viajeros conscientes.
+                    Por solo 10€ por noche, podrán dormir, compartir y vivir experiencias que los hagan crecer.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center p-4">
+                        <i class="fas fa-chalkboard-teacher feature-icon"></i>
+                        <h3 class="font-semibold text-lg text-dark-green mt-2">Talleres gratuitos</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                         <i class="fas fa-leaf feature-icon"></i>
+                        <h3 class="font-semibold text-lg text-dark-green mt-2">Turismo consciente</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                         <i class="fas fa-om feature-icon"></i>
+                        <h3 class="font-semibold text-lg text-dark-green mt-2">Espacios de meditación y arte</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                         <i class="fas fa-users feature-icon"></i>
+                        <h3 class="font-semibold text-lg text-dark-green mt-2">Conexión real entre viajeros</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="bg-light-brown">
-            <div class="container mx-auto text-center max-w-3xl">
-                <h2 class="text-3xl font-bold text-dark-green mb-6">Un proyecto humano con visión global</h2>
-                <p class="text-lg text-brown mb-8">
-                    Este hostal no es solo mío, es de todos. Buscamos:
-                </p>
-                <ul class="list-none space-y-3 text-brown text-lg mb-10 inline-block text-left">
-                    <li><i class="fas fa-check-circle text-accent-green mr-2"></i>Recuperar viviendas</li>
-                    <li><i class="fas fa-check-circle text-accent-green mr-2"></i>Crear experiencias accesibles</li>
-                    <li><i class="fas fa-check-circle text-accent-green mr-2"></i>Apoyar a la comunidad local</li>
-                    <li><i class="fas fa-check-circle text-accent-green mr-2"></i>Replicar el modelo si funciona</li>
-                </ul>
-                <div>
-                    <a href="#ayudar" class="btn btn-cta">Súmate al cambio</a>
-                </div>
-            </div>
-        </section>
+        <section class="bg-light-brown">
+            <div class="container mx-auto text-center max-w-3xl">
+                <h2 class="text-3xl font-bold text-dark-green mb-6">Un proyecto humano con visión global</h2>
+                <p class="text-lg text-brown mb-8">
+                    Este hostal no es solo mío, es de todos. Buscamos:
+                </p>
+                <ul class="list-none space-y-3 text-brown text-lg mb-10 inline-block text-left">
+                    <li><i class="fas fa-check-circle text-accent-green mr-2"></i>Recuperar viviendas</li>
+                    <li><i class="fas fa-check-circle text-accent-green mr-2"></i>Crear experiencias accesibles</li>
+                    <li><i class="fas fa-check-circle text-accent-green mr-2"></i>Apoyar a la comunidad local</li>
+                    <li><i class="fas fa-check-circle text-accent-green mr-2"></i>Replicar el modelo si funciona</li>
+                </ul>
+                <div>
+                    <a href="#ayudar" class="btn btn-cta">Súmate al cambio</a>
+                </div>
+            </div>
+        </section>
 
-        <section id="video" class="bg-white">
-            <div class="container mx-auto text-center max-w-3xl">
-                <h2 class="text-3xl font-bold text-dark-green mb-6">Video de Presentación</h2>
-                <div class="aspect-w-16 aspect-h-9 mb-4 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <p class="text-gray-500">Aquí va tu video</p>
-                    </div>
-                <p class="text-gray-600">
-                    Descubre en menos de 2 minutos por qué Raíces Nómadas puede ser el comienzo de algo grande.
-                </p>
-            </div>
-        </section>
-
-        <section id="ayudar" class="bg-light-brown">
-            <div class="container mx-auto text-center max-w-5xl">
-                <h2 class="text-3xl font-bold text-dark-green mb-10">¿Cómo Puedes Ayudar?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                        <i class="fas fa-hand-holding-usd feature-icon text-accent-green"></i>
-                        <h3 class="font-semibold text-lg text-dark-green mt-2 mb-2">Dona o Invierte</h3>
-                        <p class="text-brown">Accede a recompensas exclusivas.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                        <i class="fas fa-share-alt feature-icon text-accent-green"></i>
-                        <h3 class="font-semibold text-lg text-dark-green mt-2 mb-2">Comparte</h3>
-                        <p class="text-brown">Esta página con otros viajeros o soñadores.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                         <i class="fas fa-hands-helping feature-icon text-accent-green"></i>
-                        <h3 class="font-semibold text-lg text-dark-green mt-2 mb-2">Colabora</h3>
-                        <p class="text-brown">O embárcate como embajador.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="crowdfunding" class="bg-white">
-            <div class="container mx-auto text-center max-w-4xl">
-                <h2 class="text-3xl font-bold text-dark-green mb-6">Agradecemos tu apoyo con mucho más que palabras</h2>
-                <p class="text-lg text-gray-700 mb-10">Descubre las recompensas exclusivas por apoyar el proyecto.</p>
-                <div class="bg-gray-100 p-8 rounded-lg text-gray-600">
-                    <p class="mb-4">Aquí puedes detallar las recompensas (ej. Noches gratis, merchandising, menciones especiales...).</p>
-                    <p><strong>Ejemplo:</strong> Aportación de 50€ - 2 noches gratis + camiseta Raíces Nómadas.</p>
-                </div>
-                <div class="mt-8">
-                     <a href="#todas-recompensas" class="btn btn-secondary">Ver todas las recompensas</a>
-                     </div>
-            </div>
-        </section>
-
-        <section class="bg-light-brown">
-            <div class="container mx-auto max-w-3xl">
-                <h2 class="text-3xl font-bold text-dark-green mb-8 text-center">Preguntas Frecuentes (FAQ)</h2>
-                <div class="space-y-4">
-                    <details class="bg-white p-4 rounded-lg shadow group">
-                        <summary class="font-semibold text-dark-green cursor-pointer list-none flex justify-between items-center">
-                            ¿Dónde estará ubicado el hostal?
-                            <span class="group-open:hidden"><i class="fas fa-chevron-down text-sm text-gray-500"></i></span>
-                            <span class="hidden group-open:inline"><i class="fas fa-chevron-up text-sm text-gray-500"></i></span>
-                        </summary>
-                        <p class="text-brown mt-2">La ubicación exacta en Costa Rica se definirá una vez asegurada la financiación inicial, buscando un lugar que combine naturaleza y accesibilidad.</p>
-                    </details>
-                    <details class="bg-white p-4 rounded-lg shadow group">
-                        <summary class="font-semibold text-dark-green cursor-pointer list-none flex justify-between items-center">
-                            ¿Cuándo abrirá sus puertas?
-                            <span class="group-open:hidden"><i class="fas fa-chevron-down text-sm text-gray-500"></i></span>
-                            <span class="hidden group-open:inline"><i class="fas fa-chevron-up text-sm text-gray-500"></i></span>
-                        </summary>
-                        <p class="text-brown mt-2">Nuestro objetivo es abrir en [Indicar fecha estimada, ej. Verano 2026], dependiendo del éxito de la campaña de crowdfunding y los trabajos de adecuación.</p>
-                    </details>
-                    <details class="bg-white p-4 rounded-lg shadow group">
-                        <summary class="font-semibold text-dark-green cursor-pointer list-none flex justify-between items-center">
-                            ¿Qué pasa si no se alcanza el objetivo?
-                             <span class="group-open:hidden"><i class="fas fa-chevron-down text-sm text-gray-500"></i></span>
-                            <span class="hidden group-open:inline"><i class="fas fa-chevron-up text-sm text-gray-500"></i></span>
-                        </summary>
-                        <p class="text-brown mt-2">Dependiendo de la plataforma de crowdfunding, las aportaciones podrían ser devueltas. Buscaremos alternativas para ajustar el proyecto o intentarlo de nuevo.</p>
-                    </details>
-                     <details class="bg-white p-4 rounded-lg shadow group">
-                        <summary class="font-semibold text-dark-green cursor-pointer list-none flex justify-between items-center">
-                           ¿Puedo invertir aunque no viaje a Costa Rica?
-                            <span class="group-open:hidden"><i class="fas fa-chevron-down text-sm text-gray-500"></i></span>
-                            <span class="hidden group-open:inline"><i class="fas fa-chevron-up text-sm text-gray-500"></i></span>
-                        </summary>
-                        <p class="text-brown mt-2">¡Claro! Tu apoyo es fundamental independientemente de si planeas visitarnos. Las recompensas pueden ser adaptadas o transferidas.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-dark-green text-white">
-            <div class="container mx-auto text-center max-w-3xl">
-                <blockquote class="text-2xl italic mb-6">
-                    “Estoy poniendo mi vivienda y mi alma en este proyecto. Pero sé que no puedo hacerlo solo. Por eso lanzo esta campaña, para que juntos creemos algo que tenga sentido, que inspire y que funcione.”
-                </blockquote>
-                <p class="text-lg text-light-brown">Rándall Vargas</p>
-            </div>
-        </section>
-
-        <section class="bg-white">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold text-dark-green mb-6">¿Te sumas a Raíces Nómadas?</h2>
-                <a href="#crowdfunding" class="btn btn-primary text-lg px-8 py-4 mb-8">¡Apóyanos ahora!</a>
-                <div class="flex justify-center space-x-6">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-dark-green hover:text-accent-green text-2xl transition duration-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-dark-green hover:text-accent-green text-2xl transition duration-300">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-dark-green hover:text-accent-green text-2xl transition duration-300">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-light-brown py-6 text-center">
-        <p class="text-brown">&copy; 2025 Raíces Nómadas. Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-</html>
+        <section id="video" class="bg-white">
+            <div class="container mx-
